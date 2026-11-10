@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { float32ndarray } from '@stdlib/types/ndarray';
 
 /**
-* BLAS level 1 routine to compute the sum of absolute values for all elements in a one-dimensional single-precision floating-point ndarray.
+* Computes the sum of absolute values for all elements in a one-dimensional single-precision floating-point ndarray.
 *
-* @module @stdlib/blas-base-ndarray-sasum
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns sum
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
-* var sasum = require( '@stdlib/blas-base-ndarray-sasum' );
 *
 * var x = new Float32Vector( [ 1.0, -2.0, 3.0, -4.0, 5.0 ] );
 *
 * var y = sasum( [ x ] );
 * // returns 15.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function sasum( arrays: [ float32ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = sasum;
